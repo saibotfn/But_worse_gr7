@@ -5,14 +5,20 @@ public class CameraMovement : MonoBehaviour
 {
  
     [SerializeField] private Transform playerBody;
+    private float rotX;
+    private float rotY;
 
     private void OnLook(InputValue value)
-
-
     {
         Vector2 lookInput = value.Get<Vector2>();
-        transform.eulerAngles += new Vector3(-lookInput.y, 0,0) * 2f;
-        playerBody.eulerAngles += new Vector3(0, lookInput.x, 0) * 2f;
+        rotX += lookInput.x;
+        rotY += lookInput.y;
+
+        rotY = Mathf.Clamp(rotY, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(-rotY, 0f, 0f);
+        playerBody.localRotation = Quaternion.Euler(0f, rotX, 0f);
+        
     }
 
     void Awake()
