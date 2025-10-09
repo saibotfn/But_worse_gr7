@@ -2297,7 +2297,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 250325212}
-  - component: {fileID: 250325213}
+  - component: {fileID: 250325214}
+  - component: {fileID: 250325215}
   m_Layer: 0
   m_Name: Cube1
   m_TagString: Untagged
@@ -2313,17 +2314,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250325211}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: -26.73005, z: -4.66687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2070312150}
   - {fileID: 1105677552}
   - {fileID: 1479897355}
-  m_Father: {fileID: 1726112586}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &250325213
+--- !u!114 &250325214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2335,7 +2336,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d29f8699d03aa498872da170dd4952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Trigger
-  path: []
+  path:
+  - {x: 5, y: -26, z: -50}
+  - {x: 5, y: 40, z: -50}
+  - {x: 5, y: 40, z: -37}
+  speed: 10
+--- !u!65 &250325215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250325211}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 1.14, z: 8.99}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &251019042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,7 +3176,7 @@ Transform:
   m_GameObject: {fileID: 412583545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.70951, y: -13.5, z: 32.1}
+  m_LocalPosition: {x: 0, y: -9.6699505, z: 23.96687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3158,7 +3184,7 @@ Transform:
   - {fileID: 564600207}
   - {fileID: 265697257}
   - {fileID: 1670387415}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1726112586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417859313
 GameObject:
@@ -10579,7 +10605,7 @@ Transform:
   m_GameObject: {fileID: 1105677551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3000002, y: -16.8, z: -7.1}
+  m_LocalPosition: {x: 0, y: 0, z: 6.8}
   m_LocalScale: {x: 3, y: 7, z: 1.14}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14269,7 +14295,7 @@ Transform:
   m_GameObject: {fileID: 1479897354}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.3000002, y: -20.6, z: -13.1}
+  m_LocalPosition: {x: 0, y: -2.8, z: 0.5}
   m_LocalScale: {x: 3, y: 13, z: 1.14}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15823,7 +15849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 250325212}
+  - {fileID: 412583546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1729774859
@@ -17888,7 +17914,7 @@ Transform:
   m_GameObject: {fileID: 2070312149}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3000002, y: -16.8, z: -19.1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.5}
   m_LocalScale: {x: 3, y: 7, z: 1.14}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18104,7 +18130,7 @@ Transform:
   m_GameObject: {fileID: 2077999175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.72659, y: 22.9, z: -31.7}
+  m_LocalPosition: {x: 4.41, y: -16.8, z: -4.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18516,4 +18542,4 @@ SceneRoots:
   - {fileID: 569344562}
   - {fileID: 2117999741}
   - {fileID: 1726112586}
-  - {fileID: 412583546}
+  - {fileID: 250325212}
