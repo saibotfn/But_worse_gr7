@@ -2297,6 +2297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 250325212}
+  - component: {fileID: 250325213}
   m_Layer: 0
   m_Name: Cube1
   m_TagString: Untagged
@@ -2322,6 +2323,19 @@ Transform:
   - {fileID: 1479897355}
   m_Father: {fileID: 1726112586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250325213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250325211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d29f8699d03aa498872da170dd4952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trigger
+  path: []
 --- !u!1 &251019042
 GameObject:
   m_ObjectHideFlags: 0
