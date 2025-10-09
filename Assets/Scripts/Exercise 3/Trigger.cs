@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TriggerScript : MonoBehaviour
+public class Trigger : MonoBehaviour
 
 {
     private bool active = false;
