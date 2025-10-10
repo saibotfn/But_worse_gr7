@@ -8,6 +8,12 @@ public class Trigger : MonoBehaviour
     [SerializeField] private List <Vector3> path = new List <Vector3>() ;
     private int currentTarget = 0;
     [SerializeField] private int speed;
+    [SerializeField] private int rotSpeed;
+    [SerializeField] private int desiredRotX;
+    [SerializeField] private int fullDesiredRotX;
+    private float rotatedAmount = 0f;
+
+    private bool returning = false;
 
 
     void OnTriggerEnter(Collider collision)
@@ -17,17 +23,53 @@ public class Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!active) { return; }
-        if ((path[currentTarget] - transform.position).magnitude <= 0.1f)
+        if (active)
         {
-            transform.position = path[currentTarget];
-            currentTarget++;
+            if ((path[currentTarget] - transform.position).magnitude <= 0.1f)
+            {
+                transform.position = path[currentTarget];
+                if (currentTarget + 1 >= path.Count)
+                {
+                    if (rotatedAmount <= desiredRotX)
+                    {
+                        transform.Rotate(rotSpeed * Time.deltaTime, 0, 0);
+                        rotatedAmount += rotSpeed * Time.deltaTime;
+                    }
+                    else
+                    {
+                        active = false;
+                        returning = true;
+                    }
+                }
+                else { currentTarget++; }
+            }
+            else
+            {
+                Vector3 tempVector = (path[currentTarget] - transform.position).normalized;
+                transform.position += tempVector * speed * Time.deltaTime;
+            }
         }
-        else
+
+
+        if (returning)
         {
-            Debug.Log(path.Count);
-            Vector3 tempVector = (path[currentTarget] - transform.position).normalized;
-            transform.position += tempVector * speed * Time.deltaTime;
+            if ((path[currentTarget] - transform.position).magnitude <= 0.1f)
+            {
+                transform.position = path[currentTarget];
+                currentTarget--;
+                if(currentTarget < 0) { returning = false;}
+            }
+            else
+            {
+                Vector3 tempVector = (path[currentTarget] - transform.position).normalized;
+                transform.position += tempVector * speed * Time.deltaTime;
+            }
+
+            if (rotatedAmount <= fullDesiredRotX)
+            {
+                transform.Rotate(rotSpeed * Time.deltaTime, 0, 0);
+                rotatedAmount += rotSpeed * Time.deltaTime;
+            }
         }
     }
 }

@@ -9,7 +9,11 @@ public class BOOOM : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("BOOOOM");
-        collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(boomPower, collision.gameObject.transform.position, boomSize, boomUplift, ForceMode.Impulse);
+        collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(
+            Random.RandomRange(boomPower - 5, boomPower + 5), 
+            collision.gameObject.transform.position, 
+            Random.RandomRange(boomSize - 5, boomSize + 5), 
+            Random.RandomRange(boomUplift - 5, boomUplift + 5), 
+            ForceMode.Impulse);
     }
 }
