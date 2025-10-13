@@ -2941,7 +2941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BALLS
   ballPrefab: {fileID: 4668143495473185289, guid: d1acd1f7b81680746bfc8e9ff3fb0c58, type: 3}
-  ballAmount: 10
+  ballAmount: 50
   spawnZone:
   - {x: 5, y: 30, z: -5}
   - {x: 5, y: 30, z: 20}
@@ -18668,11 +18668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 47325369912803459, guid: d1acd1f7b81680746bfc8e9ff3fb0c58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13
+      value: 23.3
       objectReference: {fileID: 0}
     - target: {fileID: 47325369912803459, guid: d1acd1f7b81680746bfc8e9ff3fb0c58, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.9
+      value: -32.3
       objectReference: {fileID: 0}
     - target: {fileID: 47325369912803459, guid: d1acd1f7b81680746bfc8e9ff3fb0c58, type: 3}
       propertyPath: m_LocalRotation.w
