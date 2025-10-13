@@ -10,10 +10,10 @@ public class BOOOM : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(
-            Random.RandomRange(boomPower - 5, boomPower + 5), 
+            Random.Range(boomPower - 5, boomPower + 5), 
             collision.gameObject.transform.position, 
-            Random.RandomRange(boomSize - 5, boomSize + 5), 
-            Random.RandomRange(boomUplift - 5, boomUplift + 5), 
+            Random.Range(boomSize - 5, boomSize + 5), 
+            Random.Range(boomUplift - 5, boomUplift + 5), 
             ForceMode.Impulse);
     }
 }
